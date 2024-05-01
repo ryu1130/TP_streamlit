@@ -10,33 +10,33 @@ def get_user_input():
     
     with st.sidebar.expander("Credit History"):
         user_input['ExternalRiskEstimate'] = st.slider('External Risk Estimate', 0, 100, 50)
-        user_input['MSinceOldestTradeOpen'] = st.slider('Months Since Oldest Trade Open', 0, 600, 100)
-        user_input['AverageMinFile'] = st.slider('Average Months In File', 0, 360, 60)
+        user_input['MSinceOldestTradeOpen'] = st.slider('Months Since Oldest Trade Open', 0, 850, 100)
+        user_input['AverageMinFile'] = st.slider('Average Months In File', 0, 400, 60)
 
     with st.sidebar.expander("Credit Frequency"):
-        user_input['MSinceMostRecentTradeOpen'] = st.slider('Months Since Most Recent Trade Open', 0, 100, 10)
+        user_input['MSinceMostRecentTradeOpen'] = st.slider('Months Since Most Recent Trade Open', 0, 400, 10)
         user_input['NumTradesOpeninLast12M'] = st.slider('Number of Trades Open in Last 12 Months', 0, 20, 5)
-        user_input['NumInqLast6M'] = st.slider('Number of Inquiries Last 6 Months', 0, 10, 2)
-        user_input['NumInqLast6Mexcl7days'] = st.slider('Number of Inquiries Last 6 Months excluding last 7 days', 0, 10, 2)
+        user_input['NumInqLast6M'] = st.slider('Number of Inquiries Last 6 Months', 0, 70, 2)
+        user_input['NumInqLast6Mexcl7days'] = st.slider('Number of Inquiries Last 6 Months excluding last 7 days', 0, 70, 2)
 
     with st.sidebar.expander("Negative Activity"):
-        user_input['NumTrades60Ever2DerogPubRec'] = st.slider('Number of Trades 60+ Ever Derogatory/Public Records', 0, 10, 1)
-        user_input['NumTrades90Ever2DerogPubRec'] = st.slider('Number of Trades 90+ Ever Derogatory/Public Records', 0, 10, 1)
-        user_input['MSinceMostRecentDelq'] = st.slider('Months Since Most Recent Delinquency', 0, 120, 30)
-        user_input['MaxDelq2PublicRecLast12M'] = st.slider('Max Delinquency in Public Records Last 12 Months', 0, 9, 0, step=1)
-        user_input['MaxDelqEver'] = st.slider('Max Delinquency Ever', 1, 9, 1, step=1)
+        user_input['NumTrades60Ever2DerogPubRec'] = st.slider('Number of Trades 60+ Ever Derogatory/Public Records', 0, 20, 1)
+        user_input['NumTrades90Ever2DerogPubRec'] = st.slider('Number of Trades 90+ Ever Derogatory/Public Records', 0, 20, 1)
+        user_input['MSinceMostRecentDelq'] = st.slider('Months Since Most Recent Delinquency', 0, 100, 30)
+        user_input['MaxDelq2PublicRecLast12M'] = st.slider('Max Delinquency in Public Records Last 12 Months', 0, 12, 0, step=1)
+        user_input['MaxDelqEver'] = st.slider('Max Delinquency Ever', 1, 10, 1, step=1)
 
     with st.sidebar.expander("Usage"):
-        user_input['NetFractionRevolvingBurden'] = st.slider('Net Fraction Revolving Burden', 0, 200, 50)
-        user_input['NetFractionInstallBurden'] = st.slider('Net Fraction Installment Burden', 0, 200, 50)
-        user_input['NumRevolvingTradesWBalance'] = st.slider('Number of Revolving Trades with Balance', 0, 20, 5)
-        user_input['NumInstallTradesWBalance'] = st.slider('Number of Installment Trades with Balance', 0, 20, 5)
-        user_input['NumBank2NatlTradesWHighUtilization'] = st.slider('Number of Bank/National Trades with High Utilization', 0, 10, 2)
+        user_input['NetFractionRevolvingBurden'] = st.slider('Net Fraction Revolving Burden', 0, 250, 50)
+        user_input['NetFractionInstallBurden'] = st.slider('Net Fraction Installment Burden', 0, 500, 50)
+        user_input['NumRevolvingTradesWBalance'] = st.slider('Number of Revolving Trades with Balance', 0, 35, 5)
+        user_input['NumInstallTradesWBalance'] = st.slider('Number of Installment Trades with Balance', 0, 25, 5)
+        user_input['NumBank2NatlTradesWHighUtilization'] = st.slider('Number of Bank/National Trades with High Utilization', 0, 20, 2)
         user_input['PercentTradesWBalance'] = st.slider('Percent of Trades with Balance', 0, 100, 50)
 
     with st.sidebar.expander("Stability"):
-        user_input['NumSatisfactoryTrades'] = st.slider('Number of Satisfactory Trades', 0, 50, 20)
-        user_input['NumTotalTrades'] = st.slider('Total Number of Trades', 0, 50, 20)
+        user_input['NumSatisfactoryTrades'] = st.slider('Number of Satisfactory Trades', 0, 80, 20)
+        user_input['NumTotalTrades'] = st.slider('Total Number of Trades', 0, 110, 20)
         user_input['PercentTradesNeverDelq'] = st.slider('Percent of Trades Never Delinquent', 0, 100, 20)
         user_input['PercentInstallTrades'] = st.slider('Percent of Installment Trades', 0, 100, 20)
 
